@@ -1,0 +1,42 @@
+flask==3.0.3
+flask-cors==4.0.1
+python-dotenv==1.0.1
+
+
+# est the backend right now (backend is 100% complete):
+#   # Terminal 1 — install deps and start Flask
+#   cd C:\Users\kumar\Desktop\SecurePass\backend
+#   pip install -r requirements.txt
+#   python app.py
+
+#   Then in a second terminal, test each API:
+#   # Health check
+#   curl http://localhost:5000/api/health
+
+#   # Generate a password
+#   curl -X POST http://localhost:5000/api/generate `
+#     -H "Content-Type: application/json" `
+#     -d '{"length":16,"uppercase":true,"lowercase":true,"numbers":true,"symbols":true,"count":3}'
+
+#   # Check strength of any password
+#   curl -X POST http://localhost:5000/api/strength `
+#     -H "Content-Type: application/json" `
+#     -d '{"password":"MyP@ssw0rd123!"}'
+
+#   Expected responses:
+#   - /api/health → {"status": "ok"}
+#   - /api/generate → array of passwords with strength scores
+#   - /api/strength → entropy, label, warnings, character analysis
+
+#   ---
+#   What I'll Build Next (in order)
+
+#   1. StrengthIndicator.jsx + CSS — the animated color bar
+#   2. PasswordDisplay.jsx + CSS — password box + copy button
+#   3. GenerateButton.jsx + CSS — animated button
+#   4. SettingsPanel.jsx + CSS — all controls (slider, checkboxes)
+#   5. PasswordHistory.jsx + CSS — history list
+#   6. MultiPassword.jsx + CSS — bulk view
+#   7. App.jsx — assembles everything
+
+#   Should I continue building the remaining files now?
