@@ -15,8 +15,6 @@ from validators import validate_generate_request, validate_strength_request
 
 app = Flask(__name__)
 
-# Allow requests from the React dev server and the deployed Vercel domain.
-# Restrict origins in production by setting ALLOWED_ORIGINS env var.
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
